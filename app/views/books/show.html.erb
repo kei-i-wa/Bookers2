@@ -28,6 +28,7 @@
 <%= render 'books/book_new', book: @book %>
 
 
+
 <div class="col-md-8 offset-md-1">
 <h2>Book detail</h2>
 <table class="table table-hover table-inverse">
@@ -56,16 +57,7 @@
   </tr>
   </tbody>
   </table>
-
-
-
- <div class="comments"><%= render "comments/comment",books: @books,book_comment: @book_comment %></div>
-
-
-
-
- </div>
-
+　<div id="comments-area"><%= render "book_comments/comment",books: @books,book_comment: @book_comment %></div>
 
 </div>
 </div>
