@@ -26,7 +26,8 @@ class BooksController < ApplicationController
   def show
     @books=Book.find(params[:id])
     @book=Book.new
-    @book_comment = BookComment.new
+    @book_comment = BookComment
+    @book_comments = @book.book_comments.order(created_at: :desc)
 
   end
 
